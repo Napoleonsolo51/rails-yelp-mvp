@@ -1,13 +1,10 @@
 class CreateReviews < ActiveRecord::Migration[5.1]
   def change
     create_table :reviews do |t|
-      t.integer :stars
-      t.string :author
       t.text :content
-      t.references :restaurant, foreign_key: true
+      t.integer :rating
 
       t.timestamps
     end
   end
 end
-
